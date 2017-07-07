@@ -8,6 +8,8 @@ let express= require('express')
     //Import imgProcessor module which we would implement later
     ,imgProc = require('./imgProcessor');
 
+app.use(express.static('node_modules'));
+
 app.get('/', (req, res, next)=>{
     res.sendFile(__dirname+'/main.html');
 });
